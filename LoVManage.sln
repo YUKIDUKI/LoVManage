@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoVManage", "LoVManage\LoVManage.csproj", "{FF7696CC-8F24-4AA7-9F59-47840C73FDCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoVManageLib", "LoVManageLib\LoVManageLib.csproj", "{C158CA8C-19FA-4F97-B7D5-DC0B37B18A36}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF7696CC-8F24-4AA7-9F59-47840C73FDCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF7696CC-8F24-4AA7-9F59-47840C73FDCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF7696CC-8F24-4AA7-9F59-47840C73FDCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF7696CC-8F24-4AA7-9F59-47840C73FDCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C158CA8C-19FA-4F97-B7D5-DC0B37B18A36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C158CA8C-19FA-4F97-B7D5-DC0B37B18A36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C158CA8C-19FA-4F97-B7D5-DC0B37B18A36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C158CA8C-19FA-4F97-B7D5-DC0B37B18A36}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
