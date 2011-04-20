@@ -6,13 +6,13 @@ namespace LoVManageLib.Enum
     /// </summary>
     public enum Rarity
     {
-        SR = 0,
-        R = 1,
-        UC = 2,
-        C = 3,
-        EXC = 4,
-        PR = 5,
-        SP = 6,
+        SR = 1,
+        R = 2,
+        UC = 3,
+        C = 4,
+        EXC = 5,
+        PR = 6,
+        SP = 7,
         OTHER = 99
     }
 }

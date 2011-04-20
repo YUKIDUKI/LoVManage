@@ -9,34 +9,34 @@ namespace LoVManageLib.Enum
         /// <summary>
         /// 亜人
         /// </summary>
-        AJIN = 0,
+        AJIN = 1,
         /// <summary>
         /// 超獣
         /// </summary>
-        TYOUJUU = 1,
+        TYOUJUU = 2,
         /// <summary>
         /// 人獣
         /// </summary>
-        JINJUU = 2,
+        JINJUU = 3,
         /// <summary>
         /// 神族
         /// </summary>
-        SHINZOKU = 3,
+        SHINZOKU = 4,
         /// <summary>
         /// 魔種
         /// </summary>
-        MASHU = 4,
+        MASHU = 5,
         /// <summary>
         /// 海種
         /// </summary>
-        KAISHU = 5,
+        KAISHU = 6,
         /// <summary>
         /// 機甲
         /// </summary>
-        KIKOU = 6,
+        KIKOU = 7,
         /// <summary>
         /// 不死
         /// </summary>
-        FUSI = 7
+        FUSI = 8
     }
 }

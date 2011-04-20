@@ -13,34 +13,34 @@ namespace LoVManageLib.Enum
         /// <summary>
         /// 攻撃
         /// </summary>
-        ATTACK = 0,
+        ATTACK = 1,
         /// <summary>
         /// 強化
         /// </summary>
-        STRENGTHENING = 1,
+        STRENGTHENING = 2,
         /// <summary>
         /// 解除
         /// </summary>
-        CANCEL = 2,
+        CANCEL = 3,
         /// <summary>
         /// 回復
         /// </summary>
-        HEAL = 3,
+        HEAL = 4,
         /// <summary>
         /// 移動
         /// </summary>
-        MOVE = 4,
+        MOVE = 5,
         /// <summary>
         /// 罠
         /// </summary>
-        TRAP = 5,
+        TRAP = 6,
         /// <summary>
         /// 妨害
         /// </summary>
-        DISTURB = 6,
+        DISTURB = 7,
         /// <summary>
         /// 特殊
         /// </summary>
-        SPECIAL = 7
+        SPECIAL = 8
     }
 }

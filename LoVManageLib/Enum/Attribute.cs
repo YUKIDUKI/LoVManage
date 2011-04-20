@@ -9,22 +9,26 @@ namespace LoVManageLib.Enum
         /// <summary>
         /// 炎
         /// </summary>
-        FLAME = 0,
+        FLAME = 1,
         /// <summary>
         /// 闇
         /// </summary>
-        DARK = 1,
+        DARK = 2,
         /// <summary>
         /// 撃
         /// </summary>
-        GEKI = 2,
+        GEKI = 3,
         /// <summary>
         /// 雷
         /// </summary>
-        THUNDER = 3,
+        THUNDER = 4,
         /// <summary>
         /// 光
         /// </summary>
-        LIGHT = 4
+        LIGHT = 5,
+        /// <summary>
+        /// 無
+        /// </summary>
+        NOTING = 99
     }
 }

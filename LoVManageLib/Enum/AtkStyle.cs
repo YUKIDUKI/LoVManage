@@ -13,14 +13,14 @@ namespace LoVManageLib.Enum
         /// <summary>
         /// 単数
         /// </summary>
-        SINGLE = 0,
+        SINGLE = 1,
         /// <summary>
         /// 複数
         /// </summary>
-        WIDE = 1,
+        WIDE = 2,
         /// <summary>
         /// 拡散
         /// </summary>
-        SPREAD = 2
+        SPREAD = 3
     }
 }
