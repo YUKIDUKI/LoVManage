@@ -8,7 +8,7 @@ namespace LoVManageLib.Enum
     /// <summary>
     /// 特殊技の効果対象
     /// </summary>
-    enum SpecialTarget
+    public enum SpecialTarget
     {
         /// <summary>
         /// 単数
