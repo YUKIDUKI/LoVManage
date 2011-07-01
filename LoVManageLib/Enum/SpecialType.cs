@@ -8,7 +8,7 @@ namespace LoVManageLib.Enum
     /// <summary>
     /// 特殊技種別
     /// </summary>
-    enum SpeshalType
+    enum SpecialType
     {
         /// <summary>
         /// 攻撃
