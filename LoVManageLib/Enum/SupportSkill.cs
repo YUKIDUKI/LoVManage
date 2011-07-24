@@ -12,6 +12,10 @@ namespace LoVManageLib.Enum
     public enum SupportSkill
     {
         /// <summary>
+        /// 無し
+        /// </summary>
+        NOTING = 0,
+        /// <summary>
         /// ゲージ
         /// </summary>
         GAUGE = 1,
