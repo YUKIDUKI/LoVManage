@@ -57,6 +57,7 @@
     <Compile Include="Enum\Species.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="LoVMasterDataSchema.xsd" />
     <None Include="LoV_Database.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
