@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LoVMasterDataSchema"
+    targetNamespace="http://tempuri.org/LoVMasterDataSchema.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/LoVMasterDataSchema.xsd"
+    xmlns:mstns="http://tempuri.org/LoVMasterDataSchema.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:element name="servant">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="card" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" type="xs:int"/>
+              <xs:element name="name" type="xs:string"/>
+              <xs:element name="no" type="xs:string"/>
+              <xs:element name="species" type="xs:int"/>
+              <xs:element name="rearity" type="xs:int"/>
+              <xs:element name="cost" type="xs:int"/>
+              <xs:element name="speed" type="xs:int"/>
+              <xs:element name="f_skill" minOccurs="0" maxOccurs="3" type="xs:int"/>
+              <xs:element name="s_skill" minOccurs="0" maxOccurs="2" type="xs:int"/>
+              <xs:element name="hp" type="xs:int"/>
+              <xs:element name="atk" type="xs:int"/>
+              <xs:element name="def" type="xs:int"/>
+              <xs:element name="atk_attribute" type="xs:int"/>
+              <xs:element name="atk_style" type="xs:int"/>
+              <xs:element name="weakness" type="xs:int"/>
+              <xs:element name="special_target" type="xs:int"/>
+              <xs:element name="special_type" type="xs:int"/>
+              <xs:element name="spechial_text" minOccurs="1" maxOccurs="2" type="xs:string"/>
+              <xs:element name="illust" type="xs:string"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
