@@ -8,7 +8,6 @@ namespace LoVManageLib.Enum
     /// <summary>
     /// サポートスキル
     /// </summary>
-    [Flags]
     public enum SupportSkill
     {
         /// <summary>
@@ -26,43 +25,43 @@ namespace LoVManageLib.Enum
         /// <summary>
         /// リジェネ
         /// </summary>
-        REGEN = 4,
+        REGEN = 3,
         /// <summary>
         /// Wリジェネ
         /// </summary>
-        W_REGEN = 8,
+        W_REGEN = 4,
         /// <summary>
         /// レジスト
         /// </summary>
-        RESIST = 16,
+        RESIST = 5,
         /// <summary>
         /// Wレジスト
         /// </summary>
-        W_RESIST = 32,
+        W_RESIST = 6,
         /// <summary>
         /// 単スマ
         /// </summary>
-        SMASH = 64,
+        SMASH = 7,
         /// <summary>
         /// W単スマ
         /// </summary>
-        W_SMASH = 128,
+        W_SMASH = 8,
         /// <summary>
         /// 複スマ
         /// </summary>
-        WIDE_SMASH = 256,
+        WIDE_SMASH = 9,
         /// <summary>
         /// W複スマ
         /// </summary>
-        W_WIDE_SMASH = 512,
+        W_WIDE_SMASH = 10,
         /// <summary>
         /// 散スマ
         /// </summary>
-        SPREAD_SMASH = 1024,
+        SPREAD_SMASH = 11,
         /// <summary>
         /// W散スマ
         /// </summary>
-        W_SPREAD_SMASH = 2048
+        W_SPREAD_SMASH = 12
 
     }
 }
