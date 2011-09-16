@@ -14,6 +14,6 @@ namespace LoVManageLib.Enum
         PR = 6,
         SP = 7,
         UR = 8,
-        OTHER = 9
+        OTHER = 99
     }
 }
