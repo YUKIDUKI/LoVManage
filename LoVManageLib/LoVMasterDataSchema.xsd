@@ -16,55 +16,285 @@
 
   <xs:complexType name="cardType">
     <xs:sequence>
-      <xs:element ref="id"/>
-      <xs:element ref="name"/>
-      <xs:element ref="no"/>
-      <xs:element ref="species"/>
-      <xs:element ref="rearity"/>
-      <xs:element ref="cost"/>
-      <xs:element ref="speed"/>
-      <xs:element ref="f_skill" minOccurs="0" maxOccurs="3"/>
-      <xs:element ref="s_skill" minOccurs="0" maxOccurs="2"/>
-      <xs:element ref="hp"/>
-      <xs:element ref="atk"/>
-      <xs:element ref="def"/>
-      <xs:element ref="atk_attribute"/>
-      <xs:element ref="atk_style"/>
-      <xs:element ref="weakness"/>
-      <xs:element ref="special_name"/>
-      <xs:element ref="special_target"/>
-      <xs:element ref="special_type"/>
-      <xs:element ref="special_text" minOccurs="1" maxOccurs="2"/>
-      <xs:element ref="illust"/>
+      <xs:element name="field" type="fieldType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="support" type="supportType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="special" type="specialType"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:unsignedInt" use="required" />
+    <xs:attribute name="name" type="xs:string" use="required" />
+    <xs:attribute name="no" type="xs:string" use="required" />
+    <xs:attribute name="species" type="speciesType" use="required" />
+    <xs:attribute name="rearity" type="rarityType" use="required" />
+    <xs:attribute name="cost" type="constType" use="required" />
+    <xs:attribute name="speed" type="speedType" use="required" />
+    <xs:attribute name="hp" type="xs:unsignedShort" use="required" />
+    <xs:attribute name="atk" type="xs:unsignedByte" use="required" />
+    <xs:attribute name="def" type="xs:unsignedByte" use="required" />
+    <xs:attribute name="atk_attribute" type="atkAttributeType" use="required" />
+    <xs:attribute name="atk_style" type="atkStyleType" use="required" />
+    <xs:attribute name="weakness" type="weaknessType" use="required" />
+    <xs:attribute name="illust" type="xs:string" use="required" />
+    <xs:attribute name="version" type="versionType" use="required"/>
+    <xs:attribute name="character_id" type="xs:unsignedInt" use="required"/><!-- キャラクタID。このIDが同じカードは同時に登録できない。-->
+  </xs:complexType>
+
+  <!--### フィールドスキル関係 ###-->
+  <xs:complexType name="fieldType">
+    <xs:sequence>
+      <xs:element name="skill" type="fieldSkillType" minOccurs="1" maxOccurs="3"/>
     </xs:sequence>
   </xs:complexType>
-  
-  <xs:element name="id" type="xs:positiveInteger"/>
-  <xs:element name="name" type="xs:string"/>
-  <xs:element name="no" type="xs:string"/>
-  <xs:element name="species" type="speciesType"/>
-  <xs:element name="rearity" type="xs:int"/>
-  <xs:element name="cost" type="xs:int"/>
-  <xs:element name="speed" type="xs:int"/>
-  <xs:element name="f_skill" type="xs:int"/>
-  <xs:element name="s_skill" type="xs:int"/>
-  <xs:element name="hp" type="xs:positiveInteger"/>
-  <xs:element name="atk" type="xs:positiveInteger"/>
-  <xs:element name="def" type="xs:positiveInteger"/>
-  <xs:element name="atk_attribute" type="xs:int"/>
-  <xs:element name="atk_style" type="xs:int"/>
-  <xs:element name="weakness" type="xs:int"/>
-  <xs:element name="special_name" type="xs:string"/>
-  <xs:element name="special_target" type="xs:int"/>
-  <xs:element name="special_type" type="xs:int"/>
-  <xs:element name="special_text" type="xs:string"/>
-  <xs:element name="illust" type="xs:string"/>
 
+  <xs:simpleType name="fieldSkillType">
+    <xs:annotation>
+      <xs:documentation>フィールドスキル</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedByte">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:documentation>ガード</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:documentation>パワー</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:documentation>リペア</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4">
+        <xs:annotation>
+          <xs:documentation>アルカナ</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5">
+        <xs:annotation>
+          <xs:documentation>Wアルカナ</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6">
+        <xs:annotation>
+          <xs:documentation>シールド</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="7">
+        <xs:annotation>
+          <xs:documentation>Wシールド</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="8">
+        <xs:annotation>
+          <xs:documentation>Tシールド</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="9">
+        <xs:annotation>
+          <xs:documentation>ゲート</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="10">
+        <xs:annotation>
+          <xs:documentation>Wゲート</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="11">
+        <xs:annotation>
+          <xs:documentation>Tゲート</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="12">
+        <xs:annotation>
+          <xs:documentation>サーチ</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="13">
+        <xs:annotation>
+          <xs:documentation>Wサーチ</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="14">
+        <xs:annotation>
+          <xs:documentation>Tサーチ</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <!--### フィールドスキル関係ここまで ###-->
+
+  <!--### サポートスキル関係 ###-->
+  <xs:complexType name="supportType">
+    <xs:sequence>
+      <xs:element name="skill" type="supportSkillType" minOccurs="1" maxOccurs="2"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="supportSkillType">
+    <xs:annotation>
+      <xs:documentation>サポートスキル</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedShort">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:documentation>ゲージ</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:documentation>Wゲージ</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:documentation>リジェネ</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4">
+        <xs:annotation>
+          <xs:documentation>Wリジェネ</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5">
+        <xs:annotation>
+          <xs:documentation>レジスト</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6">
+        <xs:annotation>
+          <xs:documentation>Wレジスト</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="7">
+        <xs:annotation>
+          <xs:documentation>単スマ</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="8">
+        <xs:annotation>
+          <xs:documentation>W単スマ</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="9">
+        <xs:annotation>
+          <xs:documentation>複スマ</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="10">
+        <xs:annotation>
+          <xs:documentation>W複スマ</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="11">
+        <xs:annotation>
+          <xs:documentation>散スマ</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="12">
+        <xs:annotation>
+          <xs:documentation>W散スマ</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <!--### サポートスキル関係ここまで ###-->
+
+  <!--### 特殊技関係 ###-->
+  <xs:complexType name="specialType">
+    <xs:annotation>
+      <xs:documentation>特殊技</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="text" type="xs:string" minOccurs="1" maxOccurs="2" />
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required" />
+    <xs:attribute name="target" type="specialTargetType" use="required" />
+    <xs:attribute name="type" type="specialTypeType" use="required" />
+  </xs:complexType>
+
+  <xs:simpleType name="specialTargetType">
+    <xs:annotation>
+      <xs:documentation>特殊技の効果対象</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedByte">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:documentation>単数</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:documentation>複数</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:documentation>自身</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4">
+        <xs:annotation>
+          <xs:documentation>施設</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="specialTypeType">
+    <xs:annotation>
+      <xs:documentation>特殊技種別</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedByte">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:documentation>攻撃</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:documentation>強化</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:documentation>解除</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4">
+        <xs:annotation>
+          <xs:documentation>回復</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5">
+        <xs:annotation>
+          <xs:documentation>移動</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6">
+        <xs:annotation>
+          <xs:documentation>罠</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="7">
+        <xs:annotation>
+          <xs:documentation>妨害</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="8">
+        <xs:annotation>
+          <xs:documentation>特殊</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <!--### 特殊技関係ここまで ###-->
+  
   <xs:simpleType name="speciesType">
     <xs:annotation>
       <xs:documentation>種族</xs:documentation>
     </xs:annotation>
-    <xs:restriction base="xs:positiveInteger">
+    <xs:restriction base="xs:unsignedByte">
       <xs:enumeration value="1">
         <xs:annotation>
           <xs:documentation>亜人</xs:documentation>
@@ -112,7 +342,189 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
+
+  <xs:simpleType name="atkStyleType">
+    <xs:annotation>
+      <xs:documentation>攻撃形式</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedByte">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:documentation>単数</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:documentation>複数</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:documentation>拡散</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="atkAttributeType">
+    <xs:annotation>
+      <xs:documentation>攻撃属性</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedByte">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:documentation>炎</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:documentation>闇</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:documentation>撃</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4">
+        <xs:annotation>
+          <xs:documentation>雷</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5">
+        <xs:annotation>
+          <xs:documentation>光</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="weaknessType">
+    <xs:annotation>
+      <xs:documentation>弱点属性</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedByte">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:documentation>炎</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:documentation>闇</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:documentation>撃</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4">
+        <xs:annotation>
+          <xs:documentation>雷</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5">
+        <xs:annotation>
+          <xs:documentation>光</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6">
+        <xs:annotation>
+          <xs:documentation>主と同じ</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="7">
+        <xs:annotation>
+          <xs:documentation>無</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="speedType">
+    <xs:restriction base="xs:unsignedByte">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="4"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="constType">
+    <xs:restriction base="xs:unsignedByte">
+      <xs:minInclusive value="10"/>
+      <xs:maxInclusive value="30"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="rarityType">
+    <xs:annotation>
+      <xs:documentation>レアリティ</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedByte">
+      <xs:enumeration value ="1">
+        <xs:annotation>
+          <xs:documentation>SUPER RARE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:documentation>RARE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:documentation>UNCOMMON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4">
+        <xs:annotation>
+          <xs:documentation>COMMON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5">
+        <xs:annotation>
+          <xs:documentation>EXTRA COMMON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6">
+        <xs:annotation>
+          <xs:documentation>PR</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="7">
+        <xs:annotation>
+          <xs:documentation>SPECIAL</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="8">
+        <xs:annotation>
+          <xs:documentation>ULTIMATE RARE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="99">
+        <xs:annotation>
+          <xs:documentation>OTHER</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
   
-  
-  
+  <xs:simpleType name="versionType">
+    <xs:restriction base="xs:float">
+      <xs:enumeration value="1.0"/>
+      <xs:enumeration value="1.1"/>
+      <xs:enumeration value="1.2"/>
+      <xs:enumeration value="1.3"/>
+      <xs:enumeration value="1.4"/>
+      <xs:enumeration value="2.0"/>
+      <xs:enumeration value="2.1"/>
+      <xs:enumeration value="2.5"/>
+      <xs:enumeration value="2.6"/>
+      <xs:enumeration value="2.7">
+        <xs:annotation>
+          <xs:documentation>Re:2バージョン</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
 </xs:schema>
