@@ -65,7 +65,7 @@ namespace LoVManageLib.Enum
         /// <summary>
         /// Tサーチ
         /// </summary>
-        T_SEARCH
+        T_SEARCH = 14
 
     }
 }
