@@ -42,7 +42,7 @@
   <xs:element name="id" type="xs:positiveInteger"/>
   <xs:element name="name" type="xs:string"/>
   <xs:element name="no" type="xs:string"/>
-  <xs:element name="species" type="xs:int"/>
+  <xs:element name="species" type="speciesType"/>
   <xs:element name="rearity" type="xs:int"/>
   <xs:element name="cost" type="xs:int"/>
   <xs:element name="speed" type="xs:int"/>
@@ -60,4 +60,59 @@
   <xs:element name="special_text" type="xs:string"/>
   <xs:element name="illust" type="xs:string"/>
 
+  <xs:simpleType name="speciesType">
+    <xs:annotation>
+      <xs:documentation>種族</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:positiveInteger">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:documentation>亜人</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:documentation>超獣</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:documentation>人獣</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4">
+        <xs:annotation>
+          <xs:documentation>神族</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5">
+        <xs:annotation>
+          <xs:documentation>魔種</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6">
+        <xs:annotation>
+          <xs:documentation>海種</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="7">
+        <xs:annotation>
+          <xs:documentation>機甲</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="8">
+        <xs:annotation>
+          <xs:documentation>不死</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="9">
+        <xs:annotation>
+          <xs:documentation>降魔</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  
+  
 </xs:schema>
