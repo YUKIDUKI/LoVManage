@@ -49,6 +49,7 @@
     <Compile Include="Enum\AtkStyle.cs" />
     <Compile Include="Enum\Attribute.cs" />
     <Compile Include="Card.cs" />
+    <Compile Include="Enum\FieldSkill.cs" />
     <Compile Include="Enum\Rarity.cs" />
     <Compile Include="Enum\SpecialTarget.cs" />
     <Compile Include="Enum\SpecialType.cs" />
