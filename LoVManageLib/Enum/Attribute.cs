@@ -27,6 +27,10 @@ namespace LoVManageLib.Enum
         /// </summary>
         LIGHT = 5,
         /// <summary>
+        /// 主と同じ
+        /// </summary>
+        SAME_MASTER = 6,
+        /// <summary>
         /// 無
         /// </summary>
         NOTING = 99
