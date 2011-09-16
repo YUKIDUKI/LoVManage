@@ -33,6 +33,6 @@ namespace LoVManageLib.Enum
         /// <summary>
         /// 無
         /// </summary>
-        NOTING = 99
+        NOTING = 7
     }
 }
