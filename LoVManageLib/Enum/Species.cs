@@ -37,6 +37,10 @@ namespace LoVManageLib.Enum
         /// <summary>
         /// 不死
         /// </summary>
-        FUSI = 8
+        FUSI = 8,
+        /// <summary>
+        /// 降魔
+        /// </summary>
+        KOUMA = 9
     }
 }
