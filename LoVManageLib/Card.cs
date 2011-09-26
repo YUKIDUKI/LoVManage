@@ -1,8 +1,17 @@
 ﻿
 namespace LoVManageLib
 {
+    /// <summary>
+    /// カード基本クラス
+    /// </summary>
     public class Card
     {
+       public Card(string name, uint id)
+        {
+            this.Name = name;
+        }
+
+
         private uint _id;
         /// <summary>
         /// ID
@@ -30,37 +39,5 @@ namespace LoVManageLib
             get { return this._name; }
         }
 
-        public Card(string name)
-        {
-            this.Name = name;
-        }
-
-        private string _no;
-        /// <summary>
-        /// No
-        /// </summary>
-        public string No
-        {
-            set
-            {
-                if (this._no != value)
-                    this._no = value;
-            }
-            get { return this._no; }
-        }
-
-        private Enum.Species _species;
-        /// <summary>
-        /// 種族
-        /// </summary>
-        public Enum.Species Species
-        {
-            set
-            {
-                if (this._species != value)
-                    this._species = value;
-            }
-            get { return this._species; }
-        }
     }
 }

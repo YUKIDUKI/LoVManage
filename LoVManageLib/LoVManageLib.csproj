@@ -54,8 +54,14 @@
     <Compile Include="Enum\SpecialTarget.cs" />
     <Compile Include="Enum\SpecialType.cs" />
     <Compile Include="Enum\SupportSkill.cs" />
+    <Compile Include="Enum\Version.cs" />
+    <Compile Include="Enum\Weakness.cs" />
+    <Compile Include="FieldSkill.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Enum\Species.cs" />
+    <Compile Include="ServantCard.cs" />
+    <Compile Include="Special.cs" />
+    <Compile Include="SupportSkill.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="LoVMasterDataSchema.xsd" />
