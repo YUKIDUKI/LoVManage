@@ -8,7 +8,7 @@ namespace LoVManageLib
     /// <summary>
     /// サポートスキルを扱うクラス
     /// </summary>
-    public class SupportSkill
+    public class SupportSkill : NotifyPropertyChangedBase
     {
         public SupportSkill()
         {
@@ -22,7 +22,11 @@ namespace LoVManageLib
             set
             {
                 if (this._skill1 != value)
+                {
                     this._skill1 = value;
+                    OnPropertyChanged("Skill1");
+                    OnPropertyChanged("HasSkill");
+                }
             }
             get { return this._skill1; }
         }
@@ -33,7 +37,11 @@ namespace LoVManageLib
             set
             {
                 if (this._skill2 != value)
+                {
                     this._skill2 = value;
+                    OnPropertyChanged("Skill2");
+                    OnPropertyChanged("HasSkill");
+                }
             }
             get { return this._skill2; }
         }

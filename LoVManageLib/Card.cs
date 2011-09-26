@@ -4,11 +4,12 @@ namespace LoVManageLib
     /// <summary>
     /// カード基本クラス
     /// </summary>
-    public class Card
+    public class Card : NotifyPropertyChangedBase
     {
        public Card(string name, uint id)
         {
             this.Name = name;
+            this.Id = id;
         }
 
 
@@ -21,7 +22,10 @@ namespace LoVManageLib
             set
             {
                 if (this._id != value)
+                {
                     this._id = value;
+                    OnPropertyChanged("Id");
+                }
             }
             get { return this._id; }
         }
@@ -34,7 +38,10 @@ namespace LoVManageLib
             set
             {
                 if (this._name != value)
+                {
                     this._name = value;
+                    OnPropertyChanged("Name");
+                }
             }
             get { return this._name; }
         }

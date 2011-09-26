@@ -26,7 +26,10 @@ namespace LoVManageLib
             set
             {
                 if (this._fieldSkill != value)
+                {
                     this._fieldSkill = value;
+                    OnPropertyChanged("FieldSkill");
+                }
             }
             get { return this._fieldSkill; }
         }
@@ -40,7 +43,10 @@ namespace LoVManageLib
             set
             {
                 if (this._supportSkill != value)
+                {
                     this._supportSkill = value;
+                    OnPropertyChanged("SupportSkill");
+                }
             }
             get { return this._supportSkill; }
         }
@@ -54,7 +60,10 @@ namespace LoVManageLib
             set
             {
                 if (this._special != value)
+                {
                     this._special = value;
+                    OnPropertyChanged("Special");
+                }
             }
             get { return this._special; }
         }
@@ -68,7 +77,10 @@ namespace LoVManageLib
             set
             {
                 if (this._no != value)
+                {
                     this._no = value;
+                    OnPropertyChanged("No");
+                }
             }
             get { return this._no; }
         }
@@ -82,7 +94,10 @@ namespace LoVManageLib
             set
             {
                 if (this._species != value)
+                {
                     this._species = value;
+                    OnPropertyChanged("Species");
+                }
             }
             get { return this._species; }
         }
@@ -96,7 +111,10 @@ namespace LoVManageLib
             set
             {
                 if (this._rearity != value)
+                {
                     this._rearity = value;
+                    OnPropertyChanged("Rearity");
+                }
             }
             get { return this._rearity; }
         }
@@ -110,7 +128,10 @@ namespace LoVManageLib
             set
             {
                 if (this._speed != value)
+                {
                     this._speed = value;
+                    OnPropertyChanged("Speed");
+                }
             }
             get { return this._speed; }
         }
@@ -124,7 +145,10 @@ namespace LoVManageLib
             set
             {
                 if (this._cost != value)
+                {
                     this._cost = value;
+                    OnPropertyChanged("Cost");
+                }
             }
             get { return this._cost; }
         }
@@ -138,7 +162,10 @@ namespace LoVManageLib
             set
             {
                 if (this._hp != value)
+                {
                     this._hp = value;
+                    OnPropertyChanged("HP");
+                }
             }
             get { return this._hp; }
         }
@@ -152,7 +179,10 @@ namespace LoVManageLib
             set
             {
                 if (this._atk != value)
+                {
                     this._atk = value;
+                    OnPropertyChanged("ATK");
+                }
             }
             get { return this._atk; }
         }
@@ -166,7 +196,10 @@ namespace LoVManageLib
             set
             {
                 if (this._def != value)
+                {
                     this._def = value;
+                    OnPropertyChanged("DEF");
+                }
             }
             get { return this._def; }
         }
@@ -180,7 +213,10 @@ namespace LoVManageLib
             set
             {
                 if (this._attribute != value)
+                {
                     this._attribute = value;
+                    OnPropertyChanged("Attribute");
+                }
             }
             get { return this._attribute; }
         }
@@ -194,7 +230,10 @@ namespace LoVManageLib
             set
             {
                 if (this._atkStyle != value)
+                {
                     this._atkStyle = value;
+                    OnPropertyChanged("AtkStyle");
+                }
             }
             get { return this._atkStyle; }
         }
@@ -208,7 +247,10 @@ namespace LoVManageLib
             set
             {
                 if (this._weakness != value)
+                {
                     this._weakness = value;
+                    OnPropertyChanged("Weakness");
+                }
             }
             get { return this._weakness; }
         }
@@ -222,7 +264,10 @@ namespace LoVManageLib
             set
             {
                 if (this._illust != value)
+                {
                     this._illust = value;
+                    OnPropertyChanged("Illust");
+                }
             }
             get { return this._illust; }
         }
@@ -236,7 +281,10 @@ namespace LoVManageLib
             set
             {
                 if (this._version != value)
+                {
                     this._version = value;
+                    OnPropertyChanged("Version");
+                }
             }
             get { return this._version; }
         }
@@ -250,7 +298,10 @@ namespace LoVManageLib
             set
             {
                 if (this._characterId != value)
+                {
                     this._characterId = value;
+                    OnPropertyChanged("CharacterId");
+                }
             }
             get { return this._characterId; }
         }

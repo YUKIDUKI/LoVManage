@@ -8,7 +8,7 @@ namespace LoVManageLib
     /// <summary>
     /// フィールドスキルを扱うクラス
     /// </summary>
-    public class FieldSkill
+    public class FieldSkill : NotifyPropertyChangedBase
     {
         public FieldSkill()
         {
@@ -23,7 +23,11 @@ namespace LoVManageLib
             set
             {
                 if (this._skill1 != value)
+                {
                     this._skill1 = value;
+                    OnPropertyChanged("Skill1");
+                    OnPropertyChanged("HasSkill");
+                }
             }
             get { return this._skill1; }
         }
@@ -34,7 +38,11 @@ namespace LoVManageLib
             set
             {
                 if (this._skill2 != value)
+                {
                     this._skill2 = value;
+                    OnPropertyChanged("Skill2");
+                    OnPropertyChanged("HasSkill");
+                }
             }
             get { return this._skill2; }
         }
@@ -45,7 +53,11 @@ namespace LoVManageLib
             set
             {
                 if (this._skill3 != value)
+                {
                     this._skill3 = value;
+                    OnPropertyChanged("Skill3");
+                    OnPropertyChanged("HasSkill");
+                }
             }
             get { return this._skill3; }
         }
