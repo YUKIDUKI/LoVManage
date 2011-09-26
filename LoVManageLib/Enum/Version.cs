@@ -8,17 +8,17 @@ namespace LoVManageLib.Enum
     /// <summary>
     /// バージョン
     /// </summary>
-    public enum Version
+    public enum Version : byte
     {
-        Ver1_0 = 1.0,
-        Ver1_1 = 1.1,
-        Ver1_2 = 1.2,
-        Ver1_3 = 1.3,
-        Ver1_4 = 1.4,
-        Ver2_0 = 2.0,
-        Ver2_1 = 2.1,
-        Ver2_5 = 2.5,
-        Ver2_6 = 2.6,
-        Ver2_7_Re2 = 2.7
+        Ver1_0 = 10,
+        Ver1_1 = 11,
+        Ver1_2 = 12,
+        Ver1_3 = 13,
+        Ver1_4 = 14,
+        Ver2_0 = 20,
+        Ver2_1 = 21,
+        Ver2_5 = 25,
+        Ver2_6 = 26,
+        Ver2_7_Re2 = 27
     }
 }
