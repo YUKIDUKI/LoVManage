@@ -11,6 +11,10 @@ namespace LoVManageLib.Enum
     public enum FieldSkill
     {
         /// <summary>
+        /// 無し
+        /// </summary>
+        NOTING = 0,
+        /// <summary>
         /// ガード
         /// </summary>
         GUARD = 1,
