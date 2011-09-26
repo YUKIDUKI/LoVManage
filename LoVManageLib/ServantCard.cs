@@ -15,6 +15,7 @@ namespace LoVManageLib
         {
             this.FieldSkill = new FieldSkill();
             this.SupportSkill = new SupportSkill();
+            this.Special = new Special();
         }
 
         private FieldSkill _fieldSkill;
