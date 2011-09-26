@@ -30,12 +30,12 @@
     <xs:attribute name="hp" type="xs:unsignedShort" use="required" />
     <xs:attribute name="atk" type="xs:unsignedByte" use="required" />
     <xs:attribute name="def" type="xs:unsignedByte" use="required" />
-    <xs:attribute name="atk_attribute" type="atkAttributeType" use="required" />
+    <xs:attribute name="attribute" type="AttributeType" use="required" />
     <xs:attribute name="atk_style" type="atkStyleType" use="required" />
     <xs:attribute name="weakness" type="weaknessType" use="required" />
     <xs:attribute name="illust" type="xs:string" use="required" />
     <xs:attribute name="version" type="versionType" use="required"/>
-    <xs:attribute name="character_id" type="xs:unsignedInt" use="required"/><!-- キャラクタID。このIDが同じカードは同時に登録できない。-->
+    <xs:attribute name="character_id" type="xs:unsignedShort" use="optional"/><!-- キャラクタID。このIDが同じカードは同時に登録できない。-->
   </xs:complexType>
 
   <!--### フィールドスキル関係 ###-->
@@ -366,7 +366,7 @@
     </xs:restriction>
   </xs:simpleType>
 
-  <xs:simpleType name="atkAttributeType">
+  <xs:simpleType name="AttributeType">
     <xs:annotation>
       <xs:documentation>攻撃属性</xs:documentation>
     </xs:annotation>
@@ -443,7 +443,7 @@
   </xs:simpleType>
 
   <xs:simpleType name="speedType">
-    <xs:restriction base="xs:unsignedByte">
+    <xs:restriction base="xs:float">
       <xs:minInclusive value="1"/>
       <xs:maxInclusive value="4"/>
     </xs:restriction>
@@ -510,17 +510,17 @@
   </xs:simpleType>
   
   <xs:simpleType name="versionType">
-    <xs:restriction base="xs:float">
-      <xs:enumeration value="1.0"/>
-      <xs:enumeration value="1.1"/>
-      <xs:enumeration value="1.2"/>
-      <xs:enumeration value="1.3"/>
-      <xs:enumeration value="1.4"/>
-      <xs:enumeration value="2.0"/>
-      <xs:enumeration value="2.1"/>
-      <xs:enumeration value="2.5"/>
-      <xs:enumeration value="2.6"/>
-      <xs:enumeration value="2.7">
+    <xs:restriction base="xs:byte">
+      <xs:enumeration value="10"/>
+      <xs:enumeration value="11"/>
+      <xs:enumeration value="12"/>
+      <xs:enumeration value="13"/>
+      <xs:enumeration value="14"/>
+      <xs:enumeration value="20"/>
+      <xs:enumeration value="21"/>
+      <xs:enumeration value="25"/>
+      <xs:enumeration value="26"/>
+      <xs:enumeration value="27">
         <xs:annotation>
           <xs:documentation>Re:2バージョン</xs:documentation>
         </xs:annotation>
