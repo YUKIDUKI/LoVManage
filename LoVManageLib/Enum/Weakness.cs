@@ -1,10 +1,7 @@
 ﻿
 namespace LoVManageLib.Enum
 {
-    /// <summary>
-    /// 属性
-    /// </summary>
-    enum Attribute
+    public enum Weakness
     {
         /// <summary>
         /// 炎
@@ -25,6 +22,15 @@ namespace LoVManageLib.Enum
         /// <summary>
         /// 光
         /// </summary>
-        LIGHT = 5
+        LIGHT = 5,
+        /// <summary>
+        /// 主と同じ
+        /// </summary>
+        SAME_MASTER = 6,
+        /// <summary>
+        /// 無
+        /// </summary>
+        NOTING = 7
     }
+
 }
