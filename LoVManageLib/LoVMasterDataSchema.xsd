@@ -510,17 +510,17 @@
   </xs:simpleType>
   
   <xs:simpleType name="versionType">
-    <xs:restriction base="xs:byte">
-      <xs:enumeration value="10"/>
-      <xs:enumeration value="11"/>
-      <xs:enumeration value="12"/>
-      <xs:enumeration value="13"/>
-      <xs:enumeration value="14"/>
-      <xs:enumeration value="20"/>
-      <xs:enumeration value="21"/>
-      <xs:enumeration value="25"/>
-      <xs:enumeration value="26"/>
-      <xs:enumeration value="27">
+    <xs:restriction base="xs:unsignedShort">
+      <xs:enumeration value="100"/>
+      <xs:enumeration value="101"/>
+      <xs:enumeration value="102"/>
+      <xs:enumeration value="103"/>
+      <xs:enumeration value="104"/>
+      <xs:enumeration value="200"/>
+      <xs:enumeration value="201"/>
+      <xs:enumeration value="205"/>
+      <xs:enumeration value="206"/>
+      <xs:enumeration value="207">
         <xs:annotation>
           <xs:documentation>Re:2バージョン</xs:documentation>
         </xs:annotation>
