@@ -33,6 +33,10 @@ namespace LoVManageLib.Enum
         /// <summary>
         /// その他
         /// </summary>
-        OTHER = 6
+        OTHER = 6,
+        /// <summary>
+        /// 主
+        /// </summary>
+        MASTER = 7
     }
 }

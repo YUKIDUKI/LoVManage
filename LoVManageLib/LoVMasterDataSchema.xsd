@@ -248,6 +248,11 @@
           <xs:documentation>その他</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="7">
+        <xs:annotation>
+          <xs:documentation>主</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
 
