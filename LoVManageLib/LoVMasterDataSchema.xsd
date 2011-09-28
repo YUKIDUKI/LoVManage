@@ -466,7 +466,7 @@
 
   <xs:simpleType name="constType">
     <xs:restriction base="xs:unsignedByte">
-      <xs:minInclusive value="10"/>
+      <xs:minInclusive value="0"/>
       <xs:maxInclusive value="30"/>
     </xs:restriction>
   </xs:simpleType>
