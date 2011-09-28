@@ -243,6 +243,11 @@
           <xs:documentation>2体</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="6">
+        <xs:annotation>
+          <xs:documentation>その他</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
 

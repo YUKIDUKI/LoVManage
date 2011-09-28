@@ -29,6 +29,10 @@ namespace LoVManageLib.Enum
         /// <summary>
         /// 2体
         /// </summary>
-        DOUBLE = 5
+        DOUBLE = 5,
+        /// <summary>
+        /// その他
+        /// </summary>
+        OTHER = 6
     }
 }
