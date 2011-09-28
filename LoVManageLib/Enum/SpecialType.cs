@@ -41,6 +41,10 @@ namespace LoVManageLib.Enum
         /// <summary>
         /// 特殊
         /// </summary>
-        SPECIAL = 8
+        SPECIAL = 8,
+        /// <summary>
+        /// 弱体
+        /// </summary>
+        WEAK = 9
     }
 }

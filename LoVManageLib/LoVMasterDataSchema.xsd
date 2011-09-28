@@ -301,6 +301,11 @@
           <xs:documentation>特殊</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="9">
+        <xs:annotation>
+          <xs:documentation>弱体</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
   <!--### 特殊技関係ここまで ###-->
