@@ -25,6 +25,10 @@ namespace LoVManageLib.Enum
         /// <summary>
         /// 施設
         /// </summary>
-        FACILITIES = 4
+        FACILITIES = 4,
+        /// <summary>
+        /// 2体
+        /// </summary>
+        DOUBLE = 5
     }
 }
